@@ -9,11 +9,6 @@ import java.util.Scanner;
 public class PessoaJuridica extends Pessoa {
     private String cnpj;
 
-    public PessoaJuridica(String nome, String telefone, String endereco, String cnpj) {
-        super(nome, telefone, endereco);
-        this.cnpj = cnpj;
-    }
-
     public List<PessoaJuridica> registrarNaLista(List<PessoaJuridica> listaPj){
         this.salvarDadosPessoa();
         listaPj.add(this);
@@ -66,7 +61,13 @@ public class PessoaJuridica extends Pessoa {
             System.out.println(i.toString(x));
         }
     }
+    //CONSTRUCTOR
+    public PessoaJuridica(String nome, String telefone, String endereco, String cnpj) {
+        super(nome, telefone, endereco);
+        this.cnpj = cnpj;
+    }
 
+    //GETTERS E SETTERS
     public String getCnpj() {
         return cnpj;
     }

@@ -15,7 +15,6 @@ public class Carro extends Veiculo {
                 "\n Preço Diária: R$"+i.getPrecoDiaria()+"     Alugado: "+i.isAlugado()+"    Potência Motor: "+i.getPotenciaDoMotor()+"\n -------------------------------------------------";
     }
 
-
     public static void imprimirCarros( List<Carro> lista){
         int x=0;
 
@@ -30,7 +29,6 @@ public class Carro extends Veiculo {
         listaCarro.add(this);
         return listaCarro;
     }
-
 
     @Override
     public void salvarDadosVeiculo(List<Carro> listaCarros, List<Moto> listaMotos) {

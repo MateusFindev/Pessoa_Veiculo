@@ -7,8 +7,6 @@ import java.util.Scanner;
 public class Moto extends Veiculo {
     private int cilindradas;
 
-
-
     public static String toString(int numeroVeiculo, Moto i) {
         return "\n[MOTO "+numeroVeiculo+"]\n\n Placa: "+i.getPlaca()+"   Combústivel no tanque: "+i.getCombustivelNoTanque()+"l    Quilometragem: "+i.getQuilometragem()+"" +
                 "\n Preço Diária: R$"+i.getPrecoDiaria()+"     Alugado: "+i.isAlugado()+"    Cilindradas: "+i.getCilindradas()+"\n -------------------------------------------------";
@@ -55,9 +53,17 @@ public class Moto extends Veiculo {
         listaMoto.add(this);
         return listaMoto;
     }
+    public static void imprimirMotos(List<Moto> lista){
+        int x=0;
+
+        for (Moto i : lista) {
+            x++;
+            System.out.println(Moto.toString(x,i));
+        }
+    }
+
 
     //INSTANCIA MOTO
-
     public static List instanciarMotosPadrao(){
         List listaMotos = new ArrayList();
 
@@ -71,23 +77,11 @@ public class Moto extends Veiculo {
         return listaMotos;
     };
 
-    public static void imprimirMotos(List<Moto> lista){
-        int x=0;
-
-        for (Moto i : lista) {
-            x++;
-            System.out.println(Moto.toString(x,i));
-        }
-    }
-
-
-
     //CONSTRUCTOR
     public Moto(String placa, int combustivelNoTanque, int quilometragem, double precoDiaria, boolean alugado, int cilindradas) {
         super(placa, combustivelNoTanque, quilometragem, precoDiaria, alugado);
         this.cilindradas = cilindradas;
     }
-
 
     //GETTER E SETTERS
     public int getCilindradas() {

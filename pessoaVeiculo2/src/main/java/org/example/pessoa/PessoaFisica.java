@@ -33,7 +33,6 @@ public class PessoaFisica extends Pessoa{
         return listaPf;
     }
 
-
     @Override
     public String toString(int numeroPessoa) {
         return "\n[PF "+numeroPessoa+"]\n\nNome: "+ this.getNome()+"    Telefone: "+this.getTelefone()+"\nEndereço: "+this.getEndereco()+"CPF: "+ this.getCpf()
@@ -60,9 +59,6 @@ public class PessoaFisica extends Pessoa{
             System.out.println(i.toString(x));
         }
     }
-
-
-
 
     //CONSTRUCTOR
     public PessoaFisica(String name, String telefone, String endereco ,String cpf) {

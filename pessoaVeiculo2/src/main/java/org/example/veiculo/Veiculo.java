@@ -20,9 +20,6 @@ public abstract class Veiculo {
         setCombustivelNoTanque(combustivel);
     }
 
-    public abstract void salvarDadosVeiculo(List<Carro> listaCarros, List<Moto> listaMotos);
-
-
     public boolean equals(Veiculo veiculo, List<Carro> listaCarros, List<Moto> listaMotos) {
         for (Veiculo veiculo1 : listaCarros){
             if(veiculo1.getPlaca().equals(veiculo.getPlaca())){
@@ -116,6 +113,10 @@ public abstract class Veiculo {
                 break;
         }
     }
+
+
+    //FUNÇÕES ABSTRATAS
+    public abstract void salvarDadosVeiculo(List<Carro> listaCarros, List<Moto> listaMotos);
 
     //CONSTRUCTOR
     public Veiculo(String placa, int combustivelNoTanque, int quilometragem, double precoDiaria, boolean alugado) {
